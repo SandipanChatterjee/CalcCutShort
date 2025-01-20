@@ -2,7 +2,10 @@ function add(numbers: string): number {
   if (!numbers.length) {
     return 0;
   }
-  const numbersArrString = numbers.split(",");
+
+  let delimiter = /,|\n/;
+
+  const numbersArrString = numbers.split(delimiter);
   const negativeNumbers: number[] = [];
 
   const numbersArr = numbersArrString.map((el) => {
@@ -25,4 +28,4 @@ function add(numbers: string): number {
   return numbersArr.reduce((x, y) => x + y, 0);
 }
 
-console.log(add("1,-2, -3"));
+console.log(add("1\n2, 3"));

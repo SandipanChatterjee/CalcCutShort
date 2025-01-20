@@ -2,7 +2,8 @@ function add(numbers) {
     if (!numbers.length) {
         return 0;
     }
-    var numbersArrString = numbers.split(",");
+    var delimiter = /,|\n/;
+    var numbersArrString = numbers.split(delimiter);
     var negativeNumbers = [];
     var numbersArr = numbersArrString.map(function (el) {
         var convertedNumber = parseFloat(el);
@@ -20,4 +21,4 @@ function add(numbers) {
     }
     return numbersArr.reduce(function (x, y) { return x + y; }, 0);
 }
-console.log(add("1,-2, -3"));
+console.log(add("1\n2, 3"));
