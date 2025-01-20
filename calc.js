@@ -1,4 +1,7 @@
-function add(numbers) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.add = void 0;
+var add = function (numbers) {
     if (!numbers.length) {
         return 0;
     }
@@ -25,5 +28,6 @@ function add(numbers) {
         throw new Error(str_1);
     }
     return numbersArr.reduce(function (x, y) { return x + y; }, 0);
-}
-console.log(add("1\n2,-3,4"));
+};
+exports.add = add;
+console.log((0, exports.add)("1\n2,3"));

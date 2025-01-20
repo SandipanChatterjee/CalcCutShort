@@ -1,4 +1,4 @@
-function add(numbers: string): number {
+export const add = (numbers: string): number => {
   if (!numbers.length) {
     return 0;
   }
@@ -32,6 +32,6 @@ function add(numbers: string): number {
   }
 
   return numbersArr.reduce((x, y) => x + y, 0);
-}
+};
 
-console.log(add("1\n2,-3,4"));
+console.log(add("1\n2,3"));

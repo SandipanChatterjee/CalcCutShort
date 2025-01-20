@@ -3,7 +3,12 @@
     "target": "es2015", // You can set this to es2015 or later
     "lib": ["es2015", "dom"], // Make sure to include "es2015"
     "strict": true,
-    "module": "commonjs",
-    "esModuleInterop": true
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   }
 }
