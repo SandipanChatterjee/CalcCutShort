@@ -22,7 +22,8 @@ tsc --version
 ```
 ### Run the project
 1. Clone the repo
-2. tsc calc.ts
+2. install node_modules
+3. run tsc calc.ts
 3. npm start.
 4. npm run test = to test the test cases
 
