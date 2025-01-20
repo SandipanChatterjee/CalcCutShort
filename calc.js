@@ -3,6 +3,11 @@ function add(numbers) {
         return 0;
     }
     var delimiter = /,|\n/;
+    if (numbers.startsWith("//")) {
+        var parts = numbers.split(delimiter, 2); // Split into delimiter and the rest
+        delimiter = new RegExp(parts[0].slice(2)); // Extract custom delimiter
+        numbers = parts[1]; // Rest of the string
+    }
     var numbersArrString = numbers.split(delimiter);
     var negativeNumbers = [];
     var numbersArr = numbersArrString.map(function (el) {
@@ -21,4 +26,4 @@ function add(numbers) {
     }
     return numbersArr.reduce(function (x, y) { return x + y; }, 0);
 }
-console.log(add("1\n2, 3"));
+console.log(add("1\n2,-3,4"));

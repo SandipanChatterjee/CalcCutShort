@@ -5,6 +5,12 @@ function add(numbers: string): number {
 
   let delimiter = /,|\n/;
 
+  if (numbers.startsWith("//")) {
+    const parts = numbers.split(delimiter, 2); // Split into delimiter and the rest
+    delimiter = new RegExp(parts[0].slice(2)); // Extract custom delimiter
+    numbers = parts[1]; // Rest of the string
+  }
+
   const numbersArrString = numbers.split(delimiter);
   const negativeNumbers: number[] = [];
 
@@ -28,4 +34,4 @@ function add(numbers: string): number {
   return numbersArr.reduce((x, y) => x + y, 0);
 }
 
-console.log(add("1\n2, 3"));
+console.log(add("1\n2,-3,4"));
