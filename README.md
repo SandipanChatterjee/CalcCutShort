@@ -22,12 +22,8 @@ tsc --version
 ```
 ### Run the project
 1. Clone the repo
-2. Run the <b>calc.js</b> file
-3. Make changes in <b>calc.ts</b> file
-4. Run 
-```bash 
-tsc calc.ts
-```
-5. Repeat step 1
+2. tsc calc.ts
+3. npm start.
+4. npm run test = to test the test cases
 
 
